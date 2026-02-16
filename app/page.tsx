@@ -42,10 +42,10 @@ const MOCK_DATA = {
       address: '1204 Bonsella Street, Walla Walla, Washington 99362',
       phone: '****5799',
       dateOfBirth: '*/*/1951',
-      ssn: '8043',
-      routingNumber: '091000019',
+      ssn: '*****8043',
+      routingNumber: '***0019',
       accountType: 'Encryption',
-      overdraftProtection: 'Inactive',
+      overdraftProtection: 'Active',
       accountNumber: '0000000000005467',
       balance: 72126,
     },
@@ -267,7 +267,7 @@ export default function BankingApp() {
   }
 
   const formatDateMMDDYY = (isoDate: string) => {
-    const [y, m, d] = isoDate.split('-')
+    const [m, d, y] = isoDate.split('-')
     const yy = y.slice(-2)
     return `${m}-${d}-${yy}`
   }
