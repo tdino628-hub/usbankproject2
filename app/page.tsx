@@ -198,7 +198,8 @@ export default function BankingApp() {
       (u) => u.username === username && u.password === password
     )
     if (user) {
-      setLoggedInUser(user.username)
+      const fname = user.username.name.split(' ')
+      setLoggedInUser(fname[0])
       const profile = (MOCK_DATA.users as any)[user.username]
       setUserProfile(profile)
       setAccountData({
